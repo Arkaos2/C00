@@ -1,11 +1,20 @@
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
 #include <iostream>
 #include <string>
-#include "Phonebook.hpp"
-
 
 class Contact{
 
-	Contact(std::string _nom, std::string _prenom, std::string _surnom, std::string _numero, std::string _secret);
+	public:
+		Contact();
+		Contact(std::string _nom, std::string _prenom, std::string _surnom, std::string _numero, std::string _secret);
+		std::string get_nom();
+		std::string get_prenom();
+		std::string get_surnom();
+		std::string get_numero();
+		std::string get_secret();
+
 	private:
 		std::string _nom;
 		std::string _prenom;
@@ -13,3 +22,5 @@ class Contact{
 		std::string _numero;
 		std::string _secret;
 };
+
+#endif

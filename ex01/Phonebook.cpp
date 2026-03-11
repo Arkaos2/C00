@@ -1,16 +1,33 @@
 #include <iostream>
 #include <string>
-
 #include "Contact.hpp"
 #include "Phonebook.hpp"
 
-
-void Phonebook(){
+PhoneBook::PhoneBook(){
 
 }
 
 
-void _add_contact()
+
+
+void PhoneBook::search_contact()
+{
+	int i = 0;
+
+	while(i < _nb_contact || i < 8)
+	{
+		std::cout << i + 1 << "         " << '|' << _repertoire[i].get_nom();
+		std::cout << i +<< "         " << '|' << _repertoire[i].get_nom();
+		std::cout << i + 1 << "         " << '|' << _repertoire[i].get_nom();
+		std::cout << i + 1 << "         " << '|' << _repertoire[i].get_nom();
+
+
+
+
+	}
+}
+
+void PhoneBook::add_contact()
 {
 	int i = 0;
 	std::string info[5];
@@ -32,6 +49,7 @@ void _add_contact()
 		}
 		i++;
 	}
+	_nb_contact++;
 	_repertoire[_index] = Contact(info[0], info[1] ,info[2],info[3],info[4]);
 	_index = (_index + 1) % 8;
 }

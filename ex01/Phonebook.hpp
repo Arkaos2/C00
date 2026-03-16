@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Contact.hpp"
+#include <cstdlib>
 
 class PhoneBook {
 
@@ -12,6 +13,7 @@ class PhoneBook {
 		~PhoneBook();
 		void add_contact();
 		void search_contact();
+		int get_index();
 
 	private :
 		Contact _repertoire[8];
